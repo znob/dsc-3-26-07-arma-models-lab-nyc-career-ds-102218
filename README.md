@@ -445,7 +445,7 @@ Based on the ACF and PACF, fit an arma model with the right orders for AR and MA
 from statsmodels.tsa.arima_model import ARMA
 import statsmodels.api as sm
 
-# Fit an AR(2)MA(1) model to the first simulated data
+# Fit an ARMA(2,1) model to the first simulated data
 mod_arma = ARMA(data_diff, order=(2,1))
 res_arma = mod_arma.fit()
 
@@ -497,7 +497,7 @@ print(res_arma.params)
 from statsmodels.tsa.arima_model import ARMA
 import statsmodels.api as sm
 
-# Fit an AR(2)MA(2) model to the first simulated data
+# Fit an ARMA(2,2) model to the first simulated data
 mod_arma = ARMA(data_diff, order=(2,2))
 res_arma = mod_arma.fit()
 
