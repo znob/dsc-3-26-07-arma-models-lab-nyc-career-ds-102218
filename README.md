@@ -118,7 +118,7 @@ Statsmodels also has a tool that fits ARMA models on time series. The only thing
 from statsmodels.tsa.arima_model import ARMA
 import statsmodels.api as sm
 
-# Fit an MA(1) model to the first simulated data
+# Fit an AR(1) model to the first simulated data
 mod_arma = ARMA(series, order=(1,0))
 res_arma = mod_arma.fit()
 
@@ -445,7 +445,7 @@ Based on the ACF and PACF, fit an arma model with the right orders for AR and MA
 from statsmodels.tsa.arima_model import ARMA
 import statsmodels.api as sm
 
-# Fit an MA(1) model to the first simulated data
+# Fit an AR(2)MA(1) model to the first simulated data
 mod_arma = ARMA(data_diff, order=(2,1))
 res_arma = mod_arma.fit()
 
@@ -497,7 +497,7 @@ print(res_arma.params)
 from statsmodels.tsa.arima_model import ARMA
 import statsmodels.api as sm
 
-# Fit an MA(1) model to the first simulated data
+# Fit an AR(2)MA(2) model to the first simulated data
 mod_arma = ARMA(data_diff, order=(2,2))
 res_arma = mod_arma.fit()
 
